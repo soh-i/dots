@@ -1,0 +1,90 @@
+# autojump
+#[[ -f ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
+
+# perl5(local::lib)
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+
+# My perl modules (MyUtil::IO::*)
+export PERL5LIB=/home/soh.i/lib/:$PERL5LIB
+
+# system perl modules
+#export PERL5LIB=/usr/lib/perl5/site_perl/5.8.8/:$PERL5LIB
+
+# python and virtualenv
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+export PYTHONSTARTUP=$HOME/.pythonrc.py
+export WORKON_HOME=$HOME/.virtualenvs
+if [ -f $HOME/.pythonbrew/pythons/Python-2.7.5/bin/virtualenvwrapper.sh ]; then
+   source $HOME/.pythonbrew/pythons/Python-2.7.5/bin/virtualenvwrapper.sh
+fi
+
+# rbenv
+export PATH=/home/soh.i/.rbenv/bin:$PATH
+export PATH=/home/soh.i/.rbenv/shims:$PATH
+export PATH=/home/soh.i/.rbenv/versions/1.9.3-p194/bin:$PATH
+
+# alias
+alias ccat='pygmentize -g'
+alias emacs='emacsclient -nw -a ""'
+alias mv='mv -i'
+alias which='which -a'
+alias screenkill="ps ax | grep SCREEN | awk '{print $1}' | xargs kill"
+alias sl='ls'
+alias ks='ls'
+alias kess='less'
+alias lc='lv'
+alias logout='exit'
+alias www='ssh t07122ko@www.iab.keio.ac.jp'
+alias p='ps ux'
+alias ftp='/home/soh.i/bin/bin/ncftp'
+alias shm='cd /dev/shm'
+alias arkham='ssh yukke@133.27.246.79'
+alias up='popd'
+alias down='pushd'
+alias rm='rm -i'
+alias ls='ls -tF --color'
+alias ll='ls -tFl'
+alias la='ls -an'
+alias grep='grep --color=always'
+alias c='clear'
+alias history='history 1'
+alias ta="tmux attach"
+alias lf='ls -FA'
+alias 7='ssh smith7'
+alias 6='ssh smith6'
+alias 5='ssh smith5'
+alias neo='ssh neo'
+alias watson='ssh soh.i@watson.bioinfo.i.ttck.keio.ac.jp'
+alias yucca='ssh yucca -t /bin/tcsh'
+alias iris='ssh iris'
+alias gh='fg'
+alias gf='fg'
+alias less='less -M -R'
+alias R='R --quiet'
+
+export MANPATH=/home/soh.i/bin/man:$MANPATH
+export PKG_CONFIG_PATH=/home/soh.i/bin/lib/pkgconfig/
+export PYTHONPATH='/home/soh.i/bin/numpy-1.6.2/build/temp.linux-x86_64-2.7:$PYTHONPATH'
+export LD_LIBRARY_PATH=/home/soh.i/opt/lib
+export GREP_COLOR='2;33' # Highlighted by dark yellow
+
+# path
+export PATH=/opt/ScaleMP/numabind/bin:$PATH
+export PATH=/home/soh./kumamushi/genome:$PATH
+export PATH=/home/soh.i/bin/bamUtil/bin:$PATH
+export PATH=/home/soh.i/bin/cufflinks-2.0.0.Linux_x86_64:$PATH
+export PATH=/home/soh.i/bin/root/bin:$PATH
+export PATH=/home/soh.i/bin/exonerate-2.2.0-x86_64/bin:$PATH
+export PATH=/home/soh.i/bin/ncbi-blast-2.2.26+/bin:$PATH
+export PATH=/home/soh.i/bin/tophat-2.0.5.Linux_x86_64:$PATH
+export PATH=/home/soh.i/bin/bowtie2-2.0.0-beta7:$PATH
+export PATH=/home/soh.i/bin/bin:$PATH
+export PATH=/home/soh.i/bin/bamUtil_1.0.2/bamUtil/bin:$PATH
+export PATH=/home/soh.i/bin/samtools-0.1.18:$PATH
+export PATH=/home/soh.i/bin/bowtie-0.12.9:$PATH
+export PATH=/home/soh.i/bin/bedtools/bin:$PATH
+export PATH=/home/soh.i/bin/cmake-2.8.10.2-Linux-i386/bin:$PATH
+export PATH=/home/soh.i/bin/bamtools/bin:$PATH
+export PATH=/home/soh.i/opt/stow/bin:$PATH
+export PATH=/home/soh.i/opt/bin:$PATH
+export PATH=/home/soh.i/opt/stow/src/bowtie2-2.1.0:$PATH
